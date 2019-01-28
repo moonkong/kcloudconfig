@@ -20,8 +20,6 @@ security:
             filter-order: 3
             
 spring:
-    application:
-        name: service-bom
     datasource:
         driverClassName: com.mysql.jdbc.Driver
         hikari:
