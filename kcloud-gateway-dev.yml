@@ -1,6 +1,11 @@
 server:
     port: 8010
-            
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8020/eureka/
+
 zuul:
   host:
     connect-timeout-millis: 3000
