@@ -15,8 +15,6 @@ security:
             filter-order: 3
             
 spring:
-    application:
-        name: kcloud-smm-service
     datasource:
         driverClassName: com.mysql.jdbc.Driver
         hikari:
