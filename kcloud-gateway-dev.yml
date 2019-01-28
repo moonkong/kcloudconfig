@@ -24,7 +24,3 @@ hystrix:
                 isolation:
                     thread:
                         timeout-in-milliseconds: 3000
-                        
-management:
-    security:
-        enabled: false
