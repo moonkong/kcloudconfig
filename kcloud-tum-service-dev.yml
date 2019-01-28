@@ -16,7 +16,7 @@ security:
             
 spring:
     application:
-        name: service-tum
+        name: kcloud-tum-service
     datasource:
         driverClassName: com.mysql.jdbc.Driver
         hikari:
