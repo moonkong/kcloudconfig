@@ -1,0 +1,40 @@
+server:
+    port: 8021
+    
+feign:
+    hystrix:
+        enabled: false
+        
+ribbon:
+    ConnectTimeout: 7000
+    ReadTimeout: 8000
+    
+security:
+    oauth2:
+        resource:
+            filter-order: 3
+            
+spring:
+    application:
+        name: service-auth
+    datasource:
+        driverClassName: com.mysql.jdbc.Driver
+        hikari:
+            maximum-pool-size: 20
+            minimum-idle: 5
+        initialSize: 5
+        maxActive: 20
+        maxPoolPreparedStatementPerConnectionSize: 20
+        maxWait: 60000
+        minEvictableIdleTimeMillis: 300000
+        minIdle: 5
+        password: 123456
+        poolPreparedStatements: true
+        testOnBorrow: false
+        testOnReturn: false
+        testWhileIdle: true
+        timeBetweenEvictionRunsMillis: 60000
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost:3306/test
+        username: root
+        validationQuery: SELECT 1 FROM DUAL
