@@ -1,0 +1,57 @@
+server:
+    port: 8030
+            
+feign:
+    hystrix:
+        enabled: false
+        
+ribbon:
+    ConnectTimeout: 7000
+    ReadTimeout: 8000
+    
+security:
+    oauth2:
+        resource:
+            filter-order: 3
+            
+spring:
+    application:
+        name: service-tum
+    datasource:
+        driverClassName: com.mysql.jdbc.Driver
+        hikari:
+            maximum-pool-size: 20
+            minimum-idle: 5
+        initialSize: 5
+        maxActive: 20
+        maxPoolPreparedStatementPerConnectionSize: 20
+        maxWait: 60000
+        minEvictableIdleTimeMillis: 300000
+        minIdle: 5
+        password: 123456
+        poolPreparedStatements: true
+        testOnBorrow: false
+        testOnReturn: false
+        testWhileIdle: true
+        timeBetweenEvictionRunsMillis: 60000
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost:3306/kcloud-tum?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+        username: root
+        validationQuery: SELECT 1 FROM DUAL
+        
+mybatis:
+    mapperLocations: classpath:mapper/*.xml
+    type-aliases-package: com.kcloud.tum.model.entity 
+       
+mybatis-plus:
+    global-config:
+        db-config:
+            db-type: MYSQL 
+    mapper-locations: classpath:mapper/*.xml 
+    
+logging:
+    level:
+        com:
+          kcloud:
+            tum:
+              mapper: DEBUG
