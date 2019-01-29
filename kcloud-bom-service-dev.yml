@@ -14,6 +14,18 @@ security:
         resource:
             filter-order: 3
             
+security:
+  oauth2:
+    client:
+      clientId: 10087
+      clientSecret: 123456 
+      grant-type: password
+      scope: read  
+    authorization:
+      check-token-access: http://localhost:8010/auth/oauth/check_token
+  basic:
+    enabled: false
+            
 spring:
     datasource:
         driverClassName: com.mysql.jdbc.Driver
