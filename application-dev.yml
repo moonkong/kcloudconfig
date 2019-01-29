@@ -23,5 +23,7 @@ security:
       scope: read  
     authorization:
       check-token-access: http://localhost:8010/auth/oauth/check_token
+  resource:
+    token-info-uri:http://localhost:8010/auth/oauth/check_token
   basic:
     enabled: false
