@@ -16,7 +16,7 @@ security:
         authorization:
             check-token-access: http://localhost:8010/auth/oauth/check_token
         client:
-            clientId: 100817
+            clientId: 10081
             clientSecret: 123456
             grant-type: password
             scope: read
